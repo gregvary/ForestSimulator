@@ -23,9 +23,28 @@
 		<!-- Light source -->
 		<PointLight color="WHITE">
 			<transforms>
-				<Translate x="0.0" y="400.0" z="300.0" />
+				<Translate x="100" y="80.0" z="300.0" />
 			</transforms>
 		</PointLight>
+		
+		<PointLight color="YELLOW">
+			<transforms>
+				<Translate x="100.0" y="80.0" z="-300.0" />
+			</transforms>
+		</PointLight>
+		
+		<PointLight color="WHITE">
+			<transforms>
+				<Translate x="-300.0" y="80.0" z="0" />
+			</transforms>
+		</PointLight>
+		
+		<PointLight color="YELLOW">
+			<transforms>
+				<Translate x="300.0" y="80.0" z="0.0" />
+			</transforms>
+		</PointLight>
+		
 	</children>
 </Group>
 
