@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.PointLight?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.transform.Translate?>
+<?import javafx.scene.transform.Rotate?>
+<?import javafx.geometry.Point3D?>
+
+<Group xmlns:fx="http://javafx.com/fxml/1">
+	<children>
+	<!-- Ground plate -->
+		<Rectangle height="200.0" width="200.0" fill="BURLYWOOD">
+		<transforms>
+			<Rotate pivotX="0.0" pivotY="0" pivotZ="0" angle="90.0">
+				<axis><Point3D x="1" y="0" z="0"/></axis>
+			</Rotate>
+		</transforms>
+		</Rectangle>
+		
+		<!-- Light source -->
+		<PointLight color="WHITE">
+			<transforms>
+				<Translate x="0.0" y="400.0" z="300.0" />
+			</transforms>
+		</PointLight>
+	</children>
+</Group>
+
