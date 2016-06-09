@@ -1,11 +1,19 @@
 package application;
 
+import javafx.event.EventHandler;
 import javafx.scene.Camera;
 import javafx.scene.PerspectiveCamera;
 import javafx.scene.Scene;
+import javafx.scene.input.DragEvent;
+import javafx.scene.input.ScrollEvent;
 import javafx.scene.transform.Rotate;
 import javafx.scene.transform.Translate;
 
+/**
+ * 
+ * @author Kevin Wolf, Gregor Rydzynski (44354)
+ *
+ */
 public class ForestController {
 
 	private Scene scene;
@@ -17,6 +25,14 @@ public class ForestController {
 	public ForestController(Scene scene) {
 		this.scene = scene;
 		scene.setCamera(setUpCamera());
+		this.scene.setOnScroll(new EventHandler<ScrollEvent>() {
+
+			@Override
+			public void handle(ScrollEvent event) {
+				scene.getRoot().setRotationAxis(Rotate.X_AXIS);
+				scene.getRoot().setRotate(event.getTotalDeltaY());
+			}
+		});
 	}
 	
 	private final Camera setUpCamera() {

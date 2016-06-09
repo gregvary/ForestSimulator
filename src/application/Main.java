@@ -3,7 +3,6 @@ package application;
 import java.io.IOException;
 
 import javafx.application.Application;
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
@@ -13,7 +12,11 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
-
+/**
+ * 
+ * @author Kevin Wolf, Gregor Rydzynski (44354)
+ *
+ */
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
